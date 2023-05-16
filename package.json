@@ -25,7 +25,10 @@
     "nuke": "npm run clean && rm -rf package-lock.json",
     "sort-package-json": "sort-package-json && npm run sort-package-json --workspaces",
     "test": "jest",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc -b",
+    "local-publish": "lerna publish --no-git-tag-version --no-push --registry=\"http://localhost:4873/\" --preid=alpha.origen",
+    "local-unpublish": "lerna exec --no-private -- npm unpublish --registry=\"http://localhost:4873/\" \"\\${LERNA_PACKAGE_NAME}@\\$(npm view \\$LERNA_PACKAGE_NAME version)\"",
+    "local-unpublish-all": "lerna exec --no-private -- npm unpublish -f --registry=\"http://localhost:4873/\" \"\\${LERNA_PACKAGE_NAME}\""
   },
   "devDependencies": {
     "@babel/cli": "^7.20.7",

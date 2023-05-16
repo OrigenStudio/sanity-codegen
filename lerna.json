@@ -1,5 +1,8 @@
 {
-  "packages": ["packages/*"],
+  "useWorkspaces": true,
+  "packages": [
+    "packages/*"
+  ],
   "version": "1.0.0-alpha.43",
   "command": {
     "version": {
