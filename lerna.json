@@ -3,7 +3,7 @@
   "packages": [
     "packages/*"
   ],
-  "version": "1.0.0-alpha.43",
+  "version": "1.0.0-alpha.origen.0",
   "command": {
     "version": {
       "conventionalCommits": true,
