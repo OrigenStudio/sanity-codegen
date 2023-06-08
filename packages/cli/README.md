@@ -85,6 +85,14 @@ const config: SanityCodegenConfig = {
    */
   // generateTypeName: undefined,
   /**
+   * Optionally provide a function that generates the typescript workspace
+   * identifier from the schema type name.
+   * 
+   * Please note that this identifier is used for the generated typescript
+   * file, so the returned value should be a valid typescript identifier.
+   */
+  // generateWorkspaceName: undefined,
+  /**
    * This option is fed directly to prettier `resolveConfig`
    *
    * https://prettier.io/docs/en/api.html#prettierresolveconfigfilepath--options
@@ -117,7 +125,7 @@ $ npm install -g @sanity-codegen/cli
 $ sanity-codegen COMMAND
 running command...
 $ sanity-codegen (-v|--version|version)
-@sanity-codegen/cli/1.0.0-alpha.43 linux-x64 node-v18.14.0
+@sanity-codegen/cli/1.0.0-alpha.45 linux-x64 node-v18.16.0
 $ sanity-codegen --help [COMMAND]
 USAGE
   $ sanity-codegen COMMAND
